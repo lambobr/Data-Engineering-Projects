@@ -1,0 +1,28 @@
+[2022-11-29T13:27:27.466+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: twitter_etl.extract scheduled__2022-11-29T13:22:26.841273+00:00 [queued]>
+[2022-11-29T13:27:27.474+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: twitter_etl.extract scheduled__2022-11-29T13:22:26.841273+00:00 [queued]>
+[2022-11-29T13:27:27.474+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-29T13:27:27.474+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2022-11-29T13:27:27.474+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-29T13:27:27.487+0000] {taskinstance.py:1383} INFO - Executing <Task(BashOperator): extract> on 2022-11-29 13:22:26.841273+00:00
+[2022-11-29T13:27:27.490+0000] {standard_task_runner.py:55} INFO - Started process 798 to run task
+[2022-11-29T13:27:27.492+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'twitter_etl', 'extract', 'scheduled__2022-11-29T13:22:26.841273+00:00', '--job-id', '152', '--raw', '--subdir', 'DAGS_FOLDER/twitter_dags.py', '--cfg-path', '/tmp/tmpg0j3a8rl']
+[2022-11-29T13:27:27.494+0000] {standard_task_runner.py:83} INFO - Job 152: Subtask extract
+[2022-11-29T13:27:27.537+0000] {task_command.py:376} INFO - Running <TaskInstance: twitter_etl.extract scheduled__2022-11-29T13:22:26.841273+00:00 [running]> on host e7b2a4ab9b7f
+[2022-11-29T13:27:27.593+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=lambobr1994@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=twitter_etl
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-29T13:22:26.841273+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-11-29T13:22:26.841273+00:00
+[2022-11-29T13:27:27.594+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2022-11-29T13:27:27.594+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/python_scripts/extract.py']
+[2022-11-29T13:27:27.604+0000] {subprocess.py:86} INFO - Output:
+[2022-11-29T13:27:28.542+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2022-11-29T13:27:28.563+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=twitter_etl, task_id=extract, execution_date=20221129T132226, start_date=20221129T132727, end_date=20221129T132728
+[2022-11-29T13:27:28.588+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-11-29T13:27:28.609+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

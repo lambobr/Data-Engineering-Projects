@@ -1,0 +1,35 @@
+[2022-11-29T00:31:18.340+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: twitter_etl.extract manual__2022-11-29T00:31:17.069440+00:00 [queued]>
+[2022-11-29T00:31:18.349+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: twitter_etl.extract manual__2022-11-29T00:31:17.069440+00:00 [queued]>
+[2022-11-29T00:31:18.349+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-29T00:31:18.350+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2022-11-29T00:31:18.350+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-29T00:31:18.366+0000] {taskinstance.py:1383} INFO - Executing <Task(BashOperator): extract> on 2022-11-29 00:31:17.069440+00:00
+[2022-11-29T00:31:18.370+0000] {standard_task_runner.py:55} INFO - Started process 212 to run task
+[2022-11-29T00:31:18.372+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'twitter_etl', 'extract', 'manual__2022-11-29T00:31:17.069440+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/twitter_dags.py', '--cfg-path', '/tmp/tmp8lntagqh']
+[2022-11-29T00:31:18.373+0000] {standard_task_runner.py:83} INFO - Job 27: Subtask extract
+[2022-11-29T00:31:18.432+0000] {task_command.py:376} INFO - Running <TaskInstance: twitter_etl.extract manual__2022-11-29T00:31:17.069440+00:00 [running]> on host 7edd63043531
+[2022-11-29T00:31:18.513+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=lambobr1994@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=twitter_etl
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-29T00:31:17.069440+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-29T00:31:17.069440+00:00
+[2022-11-29T00:31:18.514+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2022-11-29T00:31:18.514+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 ~/***-docker/dags/extract.py']
+[2022-11-29T00:31:18.521+0000] {subprocess.py:86} INFO - Output:
+[2022-11-29T00:31:18.607+0000] {subprocess.py:93} INFO - python3: can't open file '/home/***/***-docker/dags/extract.py': [Errno 2] No such file or directory
+[2022-11-29T00:31:18.610+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2022-11-29T00:31:18.620+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2022-11-29T00:31:18.623+0000] {taskinstance.py:1406} INFO - Marking task as UP_FOR_RETRY. dag_id=twitter_etl, task_id=extract, execution_date=20221129T003117, start_date=20221129T003118, end_date=20221129T003118
+[2022-11-29T00:31:18.637+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 27 for task extract (Bash command failed. The command returned a non-zero exit code 2.; 212)
+[2022-11-29T00:31:18.665+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-11-29T00:31:18.690+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
