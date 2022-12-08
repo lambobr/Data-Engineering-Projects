@@ -5,7 +5,7 @@ from google.cloud import bigquery
 import os
 
 #credentials
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/airflow/.config/gcloud/application_default_credentials.json'
+#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/airflow/.config/gcloud/application_default_credentials.json'
 
 # constants
 UTC_DATETIME = str(datetime.utcnow())[0:15]  #append current UTC datetime to filename
