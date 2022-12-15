@@ -3,5 +3,5 @@ from datetime import datetime
 
 SLACK_CHANNEL_ID = "C04EPNAC31U"
 
-client = WebClient(token="xoxb-4506243522051-4530076132272-LL4bSI9l2BXa8DYaRjWDyK9Q")
+client = WebClient(token="INSERT TOKEN HERE")
 client.chat_postMessage(channel=SLACK_CHANNEL_ID, text=f"Run successfully: {datetime.now()}")
