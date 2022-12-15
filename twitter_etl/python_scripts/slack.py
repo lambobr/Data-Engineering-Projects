@@ -1,5 +1,8 @@
-from slack_sdk import WebClient
-from datetime import datetime
+try:
+    from slack_sdk import WebClient
+    from datetime import datetime
+except Exception as e:
+    print("Error : {} ".format(e))
 
 SLACK_CHANNEL_ID = "C04EPNAC31U"
 

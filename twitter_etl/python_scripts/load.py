@@ -1,8 +1,11 @@
-from google.cloud import storage
-from transform import tweets_json
-from datetime import datetime
-from google.cloud import bigquery
-import os
+try:
+    from google.cloud import storage
+    from transform import tweets_json
+    from datetime import datetime
+    from google.cloud import bigquery
+    import os
+except Exception as e:
+    print("Error : {} ".format(e))
 
 #credentials
 #os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/airflow/.config/gcloud/application_default_credentials.json'

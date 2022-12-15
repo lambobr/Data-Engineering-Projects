@@ -1,6 +1,10 @@
-import tweepy
-from datetime import datetime
-import pandas as pd
+try:
+    import tweepy
+    from datetime import datetime
+    import pandas as pd
+except Exception as e:
+    print("Error : {} ".format(e))
+
 
 consumer_key = 'kFNZqoQBOEEFmSqbWZBY25h2r'
 consumer_secret = 'xWEoAhQu5EY52XLgjShiJyDO2W3irD2xiteVbF4lMkPfT7Zksv'

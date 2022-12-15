@@ -1,5 +1,8 @@
-from extract import TweetsExtract
-import re
+try:
+    from extract import TweetsExtract
+    import re
+except Exception as e:
+    print("Error : {} ".format(e))
 
 # twitter id and count of tweets to extract:
 ID = 44196397
