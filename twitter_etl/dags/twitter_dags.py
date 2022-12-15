@@ -19,6 +19,7 @@ with DAG(dag_id='twitter_etl', default_args=default_args,schedule_interval=timed
     transform = BashOperator(task_id="transform", bash_command="python3 /opt/airflow/python_scripts/transform.py")
     load = BashOperator(task_id="load", bash_command="python3 /opt/airflow/python_scripts/load.py")
     finish = BashOperator(task_id="finish", bash_command="echo 'Twitter ETL successful'")
-
-    extract >> transform >> load >> finish
+    slack = BashOperator(task_id="slack", bash_command="python3 /opt/airflow/python_scripts/slack.py")
+	
+    extract >> transform >> load >> finish >> slack
 
